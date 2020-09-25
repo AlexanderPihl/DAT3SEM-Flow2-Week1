@@ -22,7 +22,7 @@ public class tester {
         Address a3 = new Address("Rottesvinget", "2300", "Giftby");
         
         p1.setAddress(a1);
-        p2.setAddress(a2);
+        p2.setAddress(a1);
         p3.setAddress(a3);
 
         em.getTransaction().begin();

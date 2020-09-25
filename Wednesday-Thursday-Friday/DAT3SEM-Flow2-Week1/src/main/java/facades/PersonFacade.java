@@ -73,6 +73,7 @@ public class PersonFacade implements IPersonFacade {
     public PersonDTO addPerson(String fName, String lName, String phone) throws MissingInputException {
         EntityManager em = getEntityManager();
         Person person = new Person(fName, lName, phone);
+        
         if ((fName.length() == 0) || (lName.length() == 0) || (phone.length() == 0)) {
             throw new MissingInputException("First Name, Last Name and/or Phone is missing");
         }
