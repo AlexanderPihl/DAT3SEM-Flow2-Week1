@@ -14,7 +14,7 @@ https://github.com/AlexanderPihl/DAT3SEM-Flow2-Week1/tree/master/Tirsdag
 - 📺 JPA ManyToMany relations (19:49)
 
 ## Wednesday/Thursday/Friday
-https://github.com/AlexanderPihl/DAT3SEM-Flow2-Week1/tree/master/Onsdag-Torsdag-Fredag
+https://github.com/AlexanderPihl/DAT3SEM-Flow2-Week1/tree/PART3/Wednesday-Thursday-Friday
 - 📺 JPA og JPQL med JOIN og DTO konvertering (36:47)
 - REST, Error Handling, Rest Assured Part 1 of 4
 - REST, Error Handling, Rest Assured Part 2 of 4: Error Handling and Tests
