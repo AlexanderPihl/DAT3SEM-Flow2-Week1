@@ -1,9 +1,9 @@
 # Flow2-Week1 - Alexander Pihl - DAT3SEM
 
-## Mandag
+## Monday
 - Review of CA1
 
-## Tirsdag
+## Tuesday
 https://github.com/AlexanderPihl/DAT3SEM-Flow2-Week1/tree/master/Tirsdag
 - 📺 JPA intro (2:06)
 - 📺 JPA Project Setup (14:57)
@@ -11,7 +11,7 @@ https://github.com/AlexanderPihl/DAT3SEM-Flow2-Week1/tree/master/Tirsdag
 - 📺 JPA OneToMany relations (27:31)
 - 📺 JPA ManyToMany relations (19:49)
 
-## Onsdag/Torsdag/Fredag
+## Wednesday/Thursday/Friday
 https://github.com/AlexanderPihl/DAT3SEM-Flow2-Week1/tree/master/Onsdag-Torsdag-Fredag
 - 📺 JPA og JPQL med JOIN og DTO konvertering (36:47)
 - REST, Error Handling, Rest Assured Part 1 of 4
