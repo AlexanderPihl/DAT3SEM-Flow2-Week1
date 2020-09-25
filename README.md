@@ -4,6 +4,7 @@
 - Review of CA1
 
 ## Tirsdag
+https://github.com/AlexanderPihl/DAT3SEM-Flow2-Week1/tree/master/Tirsdag
 - 📺 JPA intro (2:06)
 - 📺 JPA Project Setup (14:57)
 - 📺 JPA OneToOne relations (21:44)
@@ -11,6 +12,7 @@
 - 📺 JPA ManyToMany relations (19:49)
 
 ## Onsdag/Torsdag/Fredag
+https://github.com/AlexanderPihl/DAT3SEM-Flow2-Week1/tree/master/Onsdag-Torsdag-Fredag
 - 📺 JPA og JPQL med JOIN og DTO konvertering (36:47)
 - REST, Error Handling, Rest Assured Part 1 of 4
 - REST, Error Handling, Rest Assured Part 2 of 4: Error Handling and Tests
