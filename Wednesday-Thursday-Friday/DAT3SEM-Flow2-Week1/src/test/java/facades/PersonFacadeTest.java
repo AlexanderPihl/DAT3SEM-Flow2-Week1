@@ -1,6 +1,9 @@
 package facades;
 
+import dto.PersonDTO;
+import dto.PersonsDTO;
 import entities.Person;
+import exceptions.PersonNotFoundException;
 import utils.EMF_Creator;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,6 +21,9 @@ public class PersonFacadeTest {
 
     private static EntityManagerFactory emf;
     private static PersonFacade facade;
+    private Person p1;
+    private Person p2;
+    private Person p3;
 
     public PersonFacadeTest() {
     }
@@ -38,11 +44,15 @@ public class PersonFacadeTest {
     @BeforeEach
     public void setUp() {
         EntityManager em = emf.createEntityManager();
+        p1 = new Person("Gunner", "Storstrømpe", "83654121");
+        p2 = new Person("Carl", "Vingearm", "14545679");
+        p3 = new Person("Lise", "Piversen", "21354312");
         try {
             em.getTransaction().begin();
-            em.persist(new Person("Gunner", "Storstrømpe", "83654121"));
-            em.persist(new Person("Carl", "Vingearm", "14545679"));
-            em.persist(new Person("Lise", "Piversen", "21354312"));
+            em.createQuery("DELETE FROM Person p").executeUpdate();
+            em.persist(p1);
+            em.persist(p2);
+            em.persist(p3);
             em.getTransaction().commit();
         } finally {
             em.close();
@@ -59,5 +69,35 @@ public class PersonFacadeTest {
     public void testAFacadeMethod() {
         assertEquals(3, facade.getPersonCount(), "Expects three rows in the database");
     }
+    
+    @Test
+    public void testPersonCount() {
+        assertEquals(3, facade.getPersonCount(), "Expects three rows in the database");
+    }
+
+    @Test
+    public void testGetAllPersons() {
+        PersonsDTO personsDTO = facade.getAllPersons();
+        
+        assertEquals(facade.getAllPersons().equals(personsDTO), personsDTO.equals(personsDTO));
+    }
+    
+    @Test
+    public void testGetPerson() throws PersonNotFoundException {
+        
+        PersonDTO personDTO = facade.getPerson(p1.getId());
+        assertEquals("Gunner", personDTO.getFirstName());
+        
+    }
+    
+//    @Test
+//    public void testAddPerson() throws MissingInputException {
+//        PersonDTO person = facade.addPerson("J-P", "L-M", "1234");
+//        PersonsDTO list = facade.getAllPersons();
+//        
+//        assertEquals(3, person.equals(list));
+//        assertThat(person.getFirstName(), Matchers.hasItemInArray(list.));
+//        
+//    }
 
 }
